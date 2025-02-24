@@ -1,0 +1,56 @@
+[ 
+    {
+        "key": "quicksilver",
+        "project_name": "quicksilverd",
+        "service_name": "quicksilver",
+        "folder_name": "quicksilver",
+        "stage": "mainnet",
+        "type": "pruned",
+        "domain": "st-snap-1.stakeme.pro"
+    },
+    {
+        "key": "celestia",
+        "project_name": "celestia-appd",
+        "service_name": "celestia-app",
+        "folder_name": "celestia",
+        "stage": "mainnet",
+        "type": "pruned",
+        "domain": "st-snap-1.stakeme.pro"
+    },
+    {
+        "key": "bouncebit",
+        "project_name": "bbcored",
+        "service_name": "bouncebit",
+        "folder_name": "bouncebit",
+        "stage": "mainnet",
+        "type": "pruned",
+        "domain": "st-snap-1.stakeme.pro"
+    },
+    {
+        "key": "bouncebit",
+        "project_name": "bbcored",
+        "service_name": "bouncebit",
+        "folder_name": "bouncebit",
+        "stage": "mainnet",
+        "type": "archive",
+        "domain": "st-snap-1.stakeme.pro"
+    },
+    {
+        "key": "humansai",
+        "project_name": "humand",
+        "service_name": "humand",
+        "folder_name": "humansai",
+        "stage": "mainnet",
+        "type": "pruned",
+        "domain": "st-snap-1.stakeme.pro"
+    },
+    {
+        "key": "sei",
+        "project_name": "seid",
+        "service_name": "sei",
+        "folder_name": "sei",
+        "stage": "mainnet",
+        "type": "pruned",
+        "domain": "st-snap-1.stakeme.pro"
+    }
+]

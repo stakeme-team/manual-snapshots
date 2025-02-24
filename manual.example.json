@@ -1,8 +1,0 @@
-{
-    "project_name": "quicksilver",
-    "service_name": "quicksilverd",
-    "snapshot_link": "https://st-snap-1.stakeme.pro/quicksilver/pruned/cosmos_data_quicksilver_20250222_020001.tar.lz4",
-    "stage": "mainnet",
-    "type": "pruned",
-    "manual": "# System Dependencies & Configuration\n#-----------------------------------------\nsudo apt update > /dev/null 2>&1\nsudo apt install curl tmux jq lz4 unzip aria2 wget htop net-tools -y > /dev/null 2>&1\nsed -i.bak -E 's|^(enable[[:space:]]+=[[:space:]]+).*$|\\1false|' $HOME/.<service_name>/config/config.toml\n# Download Node Snapshots\n#-----------------------------------------\ncd $HOME\nsudo systemctl stop <project_name>\naria2c -x 16 -s 16 -o <project_name>-<type>-snap.tar.lz4 https://st-snap-1.stakeme.pro/<project_name>/<stage>/<type>/cosmos_data_<project_name>_20250219_110001.tar.lz4\n# Restore Sei Chain Data\n#-----------------------------------------\ncp $HOME/.<service_name>/data/priv_validator_state.json $HOME/.<service_name>/priv_validator_state.json.backup\nrm -r $HOME/.<service_name>/data\ntar -I lz4 -xvf ~/<project_name>-<type>-snap.tar.lz4 -C $HOME/.<service_name>\nmv $HOME/.<service_name>/priv_validator_state.json.backup $HOME/.<service_name>/data/priv_validator_state.json\n# Monitor, cleanup and restart services\n#-----------------------------------------\nsudo systemctl restart <project_name>\nrm $HOME/<project_name>-<type>-snap.tar.lz4\nsudo journalctl -u <project_name> -f --no-hostname -o cat"
-}
