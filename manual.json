@@ -52,5 +52,14 @@
         "stage": "mainnet",
         "type": "pruned",
         "domain": "st-snap-1.stakeme.pro"
+    },
+    {
+        "key": "xrpl-testnet",
+        "project_name": "exrpd",
+        "service_name": "exrpd",
+        "folder_name": "xrpl",
+        "stage": "testnet",
+        "type": "pruned",
+        "domain": "st-snap-1.stakeme.pro"
     }
 ]
